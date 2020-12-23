@@ -8,3 +8,7 @@
 5.times do |i|
   Product.create(name: "product-#{i}", description: "Product #{i}")
 end
+
+3.times do |i|
+  Review.create(author: "Jl-#{i}", rating: "#{i}", headline: "Something good.", product_id: "63e195d9-1b99-4186-9e6e-879c17198f97")
+end
