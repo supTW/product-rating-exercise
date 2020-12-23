@@ -3,8 +3,8 @@ class ReviewsController < ApplicationController
 
   def index
     @product = Product.find(params[:product_id])
-    @review = @product.reviews
-    json_response(@reviews)
+    @reviews = @product.reviews
+    render json: @reviews
   end
 
   # POST /reviews

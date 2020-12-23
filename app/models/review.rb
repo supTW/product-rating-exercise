@@ -8,7 +8,7 @@ class Review < ApplicationRecord
     select("author, :rating, :headline, :created_at")
     .order("rating DESC")
   )}
-  scope :newest_rating_first,-> {(
+  scope :newest_rating_first, -> {(
     select("author, :rating, :headline, :created_at")
     .order("created_at DESC")
   )}
